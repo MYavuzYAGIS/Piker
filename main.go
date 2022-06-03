@@ -60,3 +60,38 @@ func spawn() {
 
 	}
 }
+
+func main() {
+	var (
+		ungronFlag     bool
+		colorizeFlag   bool
+		monochromeFlag bool
+		streamFlag     bool
+		noSortFlag     bool
+		versionFlag    bool
+		insecureFlag   bool
+		jsonFlag       bool
+		valuesFlag     bool
+	)
+
+	flag.BoolVar(&ungronFlag, "ungron", false, "")
+	flag.BoolVar(&ungronFlag, "u", false, "")
+	flag.BoolVar(&colorizeFlag, "colorize", false, "")
+	flag.BoolVar(&colorizeFlag, "c", false, "")
+	flag.BoolVar(&monochromeFlag, "monochrome", false, "")
+	flag.BoolVar(&monochromeFlag, "m", false, "")
+	flag.BoolVar(&streamFlag, "s", false, "")
+	flag.BoolVar(&streamFlag, "stream", false, "")
+	flag.BoolVar(&noSortFlag, "no-sort", false, "")
+	flag.BoolVar(&versionFlag, "version", false, "")
+	flag.BoolVar(&insecureFlag, "k", false, "")
+	flag.BoolVar(&insecureFlag, "insecure", false, "")
+	flag.BoolVar(&jsonFlag, "j", false, "")
+	flag.BoolVar(&jsonFlag, "json", false, "")
+	flag.BoolVar(&valuesFlag, "values", false, "")
+	flag.BoolVar(&valuesFlag, "value", false, "")
+	flag.BoolVar(&valuesFlag, "v", false, "")
+
+	flag.Parse()
+
+}
