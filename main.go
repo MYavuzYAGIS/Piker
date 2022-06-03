@@ -15,7 +15,7 @@ var (
 	base64Success = color.New(color.FgBlue)
 	md5Success    = color.New(color.FgCyan)
 	shaSuccess    = color.New(color.FgGreen, color.Bold)
-	Failue        = color.New(color.FgRed)
+	Failure       = color.New(color.FgRed)
 	Fatal         = color.New(color.FgRed, color.Bold)
 )
 
@@ -72,6 +72,7 @@ func main() {
 		md5Flag        bool
 		sha1Flag       bool
 		listFlag       bool
+		versionFlag    bool
 	)
 
 	flag.BoolVar(&onlineFlag, "online", false, "")
@@ -96,4 +97,7 @@ func main() {
 		os.Exit(exitOK)
 	}
 
+	//TODO: add argparse
+	//TODO: add file extension checker (.pk)
+	//TODO : create the easiest function which is base64 encode/decode
 }
