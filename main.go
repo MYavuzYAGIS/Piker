@@ -103,8 +103,8 @@ func main() {
 	//TODO: add argparse
 	//TODO: add file extension checker (.pk)
 	//TODO : create the easiest function which is base64 encode/decode
-	a := baser.BaseTextDecode("-1")
-	// a := baser.BaseTextDecode("aGVsbG8sd29ybGQhCg==")
+	// a := baser.BaseTextDecode("-1")
+	a := baser.BaseTextDecode("aGVsbG8sd29ybGQhCg==")
 	b := baser.BaseTextEncode(a)
 	fmt.Println(a, b)
 }
