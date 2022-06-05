@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-func baseTextDecode(text string) []byte {
+func BaseTextDecode(text string) []byte {
 
 	text = strings.ReplaceAll(text, `\/`, `/`)
 	dcd, err := base64.StdEncoding.DecodeString(text)

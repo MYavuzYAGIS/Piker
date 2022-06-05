@@ -5,15 +5,13 @@ import (
 	"fmt"
 	"os"
 
+	"github.com/MYavuzYAGIS/Piker/baser"
 	"github.com/fatih/color"
-	"github.com/MYavuzYAGIs/Piker/baser"
 )
 
 //base64
 //md5
 //sha1
-
-baser.baseTextDecode("asdasdasdasas")
 
 var (
 	base64Success = color.New(color.FgBlue)
@@ -105,5 +103,5 @@ func main() {
 	//TODO: add argparse
 	//TODO: add file extension checker (.pk)
 	//TODO : create the easiest function which is base64 encode/decode
-
+	baser.BaseTextDecode("aGVsbG8sd29ybGQhCg==")
 }
