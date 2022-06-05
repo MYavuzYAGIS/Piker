@@ -11,7 +11,7 @@ import (
 //md5
 //sha1
 
-base_text_decode("QmFzZSA2NCDigJQgTW96aWxsYSBEZXZlbG9wZXIgTmV0d29yaw==")
+bs4.base_text_decode("QmFzZSA2NCDigJQgTW96aWxsYSBEZXZlbG9wZXIgTmV0d29yaw==")
 
 //var (
 //	base64Success = color.New(color.FgBlue)
