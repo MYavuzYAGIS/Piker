@@ -3,33 +3,37 @@ package main
 import (
 	"flag"
 	"fmt"
-	"github.com/MYavuzYAGIS/Piker/bs4"
 	"os"
+
+	"github.com/fatih/color"
+	"bs4"
 )
 
 //base64
 //md5
 //sha1
 
-bs4.base_text_decode("QmFzZSA2NCDigJQgTW96aWxsYSBEZXZlbG9wZXIgTmV0d29yaw==")
+baseTextDecode("QmFzZSA2NCDigJQgTW96aWxsYSBEZXZlbG9wZXIgTmV0d29yaw==")
 
-//var (
-//	base64Success = color.New(color.FgBlue)
-//	md5Success    = color.New(color.FgCyan)
-//	shaSuccess    = color.New(color.FgGreen, color.Bold)
-//	Failure       = color.New(color.FgRed)
-//	Fatal         = color.New(color.FgRed, color.Bold)
-//)
+
+var (
+	base64Success = color.New(color.FgBlue)
+	md5Success    = color.New(color.FgCyan)
+	shaSuccess    = color.New(color.FgGreen, color.Bold)
+	Failure       = color.New(color.FgRed)
+	Fatal         = color.New(color.FgRed, color.Bold)
+)
 
 const (
 	exitOK = iota
-	//exitOpenFile
-	//exitReadInput
-	//exitFetchURL
-	//exitParseStatements
+	exitOpenFile
+	exitReadInput
+	exitFetchURL
+	exitParseStatements
 )
 
 var PikerVersion = "dev"
+
 //
 //func spawn() {
 //	flag.Usage = func() {
@@ -103,7 +107,4 @@ func main() {
 	//TODO: add file extension checker (.pk)
 	//TODO : create the easiest function which is base64 encode/decode
 
-
 }
-
-
