@@ -2,12 +2,13 @@ package baser
 
 import (
 	"encoding/base64"
+	"errors"
 	"fmt"
 	"log"
 	"strings"
 )
 
-func BaseTextDecode(text string) []byte {
+func BaseTextDecode(text string) string {
 
 	text = strings.ReplaceAll(text, `\/`, `/`)
 	dcd, err := base64.StdEncoding.DecodeString(text)
@@ -15,23 +16,26 @@ func BaseTextDecode(text string) []byte {
 		log.Fatal(err)
 	}
 
-	fmt.Println(string(dcd))
-	return dcd
+	// fmt.Println(string(dcd))
+	return string(dcd)
 
 }
 
 //
-//func base_text_encode(text) string {
-//	v := validator.New()
-//	text = b64{
-//		Target: "text",
-//	}
-//	err := v.Struct(text)
-//	for _, e := range err.(validator.ValidationErrors) {
-//		fmt.Println(e)
-//	}
-//
-//}
+func BaseTextEncode(text string) string {
+	enc := string(base64.StdEncoding.EncodeToString([]byte(text)))
+	if strings.Contains(enc, "illegal base64 data at") {
+		errorVal := errors.New("error! This is not a valid base64 line")
+		return errorVal.Error()
+
+	}
+	enc = base64.StdEncoding.EncodeToString([]byte(text))
+	encoded := string(enc)
+	a := fmt.Sprint(encoded)
+	return a
+
+}
+
 //
 //func base_file_encode() string {
 //

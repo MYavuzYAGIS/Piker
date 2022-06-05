@@ -96,12 +96,15 @@ func main() {
 	flag.Parse()
 
 	if versionFlag {
-		fmt.Printf("Piker version %s\n", PikerVersion)
+		// fmt.Printf("Piker version %s\n", PikerVersion)
 		os.Exit(exitOK)
 	}
 
 	//TODO: add argparse
 	//TODO: add file extension checker (.pk)
 	//TODO : create the easiest function which is base64 encode/decode
-	baser.BaseTextDecode("aGVsbG8sd29ybGQhCg==")
+	a := baser.BaseTextDecode("-1")
+	// a := baser.BaseTextDecode("aGVsbG8sd29ybGQhCg==")
+	b := baser.BaseTextEncode(a)
+	fmt.Println(a, b)
 }
