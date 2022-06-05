@@ -1,4 +1,4 @@
-package bs4
+package baser
 
 import (
 	"encoding/base64"

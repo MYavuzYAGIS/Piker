@@ -6,11 +6,14 @@ import (
 	"os"
 
 	"github.com/fatih/color"
+	"github.com/MYavuzYAGIs/Piker/baser"
 )
 
 //base64
 //md5
 //sha1
+
+baser.baseTextDecode("asdasdasdasas")
 
 var (
 	base64Success = color.New(color.FgBlue)
