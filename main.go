@@ -6,15 +6,11 @@ import (
 	"os"
 
 	"github.com/fatih/color"
-	"bs4"
 )
 
 //base64
 //md5
 //sha1
-
-baseTextDecode("QmFzZSA2NCDigJQgTW96aWxsYSBEZXZlbG9wZXIgTmV0d29yaw==")
-
 
 var (
 	base64Success = color.New(color.FgBlue)
