@@ -6,12 +6,13 @@ import (
 	"os"
 
 	"github.com/MYavuzYAGIS/Piker/baser"
+	"github.com/MYavuzYAGIS/Piker/digest5"
 	"github.com/fatih/color"
 )
 
-//base64
-//md5
-//sha1
+// base64
+// md5
+// sha1
 
 var (
 	base64Success = color.New(color.FgBlue)
@@ -100,13 +101,14 @@ func main() {
 		os.Exit(exitOK)
 	}
 
-	//TODO: add argparse
-	//TODO: add file extension checker (.pk)
-	//TODO : create the easiest function which is base64 encode/decode
+	// TODO: add argparse
+	// TODO: add file extension checker (.pk)
+	// TODO : create the easiest function which is base64 encode/decode
 	// a := baser.BaseTextDecode("-1")
 	a := baser.BaseTextDecode("aGVsbG8sd29ybGQhCg==")
 	b := baser.BaseTextEncode(a)
 	fmt.Println(a, b)
 	baser.BaseFileEncode()
 	baser.BaseFileDecode()
+	digest5.Md5StringHasher("yavuz")
 }
