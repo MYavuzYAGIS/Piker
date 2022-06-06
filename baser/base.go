@@ -1,5 +1,11 @@
 package baser
 
+// TODO -> Read file path from stdin
+// TODO -> Read string from stdin
+// TODO -> Check file extension
+// TODO -> maybe a better error handling
+// TODO -> enable Flags and coloring schemes
+
 import (
 	"bufio"
 	"encoding/base64"
@@ -12,14 +18,12 @@ import (
 )
 
 func BaseTextDecode(text string) string {
-
 	text = strings.ReplaceAll(text, `\/`, `/`)
 	dcd, err := base64.StdEncoding.DecodeString(text)
 	if err != nil {
 		log.Fatal(err)
 	}
 	return string(dcd)
-
 }
 
 func BaseTextEncode(text string) string {
@@ -28,7 +32,7 @@ func BaseTextEncode(text string) string {
 	return a
 }
 
-//read from file, encode each line into base 64.
+// read from file, encode each line into base 64.
 func BaseFileEncode() int {
 	dat, err := os.Open("mockData/yavuz.pk")
 	errorchecker.Erred(err)
