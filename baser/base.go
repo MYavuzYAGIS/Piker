@@ -29,7 +29,7 @@ func BaseTextEncode(text string) string {
 }
 
 //read from file, encode each line into base 64.
-func BaseFileEncode() {
+func BaseFileEncode() int {
 	dat, err := os.Open("yavuz.pk")
 	errorchecker.Erred(err)
 	fmt.Println("opened the file")
@@ -43,9 +43,22 @@ func BaseFileEncode() {
 		fmt.Println(encoded)
 	}
 	dat.Close()
+	return 0
 }
 
-//
-//func base_file_decode() string {
-//
-//}
+func BaseFileDecode() int {
+	dat, err := os.Open("yavuzdecoded.pk")
+	errorchecker.Erred(err)
+	fmt.Println("opened the file")
+	fileScanner := bufio.NewScanner(dat)
+	fileScanner.Split(bufio.ScanLines)
+	fmt.Println("Scanned the file...")
+	fmt.Println("Now Iterating...")
+	for fileScanner.Scan() {
+		text := fileScanner.Text()
+		encoded := BaseTextDecode(text)
+		fmt.Println(encoded)
+	}
+	dat.Close()
+	return 0
+}

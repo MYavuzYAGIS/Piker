@@ -108,4 +108,5 @@ func main() {
 	b := baser.BaseTextEncode(a)
 	fmt.Println(a, b)
 	baser.BaseFileEncode()
+	baser.BaseFileDecode()
 }
