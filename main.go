@@ -107,4 +107,5 @@ func main() {
 	a := baser.BaseTextDecode("aGVsbG8sd29ybGQhCg==")
 	b := baser.BaseTextEncode(a)
 	fmt.Println(a, b)
+	baser.BaseFileEncode()
 }

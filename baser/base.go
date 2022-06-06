@@ -1,10 +1,14 @@
 package baser
 
 import (
+	"bufio"
 	"encoding/base64"
 	"fmt"
 	"log"
+	"os"
 	"strings"
+
+	"github.com/MYavuzYAGIS/Piker/errorchecker"
 )
 
 func BaseTextDecode(text string) string {
@@ -24,10 +28,23 @@ func BaseTextEncode(text string) string {
 	return a
 }
 
-//
-//func base_file_encode() string {
-//
-//}
+//read from file, encode each line into base 64.
+func BaseFileEncode() {
+	dat, err := os.Open("yavuz.pk")
+	errorchecker.Erred(err)
+	fmt.Println("opened the file")
+	fileScanner := bufio.NewScanner(dat)
+	fileScanner.Split(bufio.ScanLines)
+	fmt.Println("Scanned the file...")
+	fmt.Println("Now Iterating...")
+	for fileScanner.Scan() {
+		text := fileScanner.Text()
+		encoded := BaseTextEncode(text)
+		fmt.Println(encoded)
+	}
+	dat.Close()
+}
+
 //
 //func base_file_decode() string {
 //
