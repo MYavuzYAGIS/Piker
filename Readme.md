@@ -1,4 +1,4 @@
-[![CodeFactor](https://www.codefactor.io/repository/github/myavuzyagis/piker/badge/main)](https://www.codefactor.io/repository/github/myavuzyagis/piker/overview/main)
+[![CodeFactor](https://www.codefactor.io/repository/github/myavuzyagis/piker-wip/badge)](https://www.codefactor.io/repository/github/myavuzyagis/piker-wip)
 
 ***WIP***
 
