@@ -2,11 +2,9 @@ package main
 
 import (
 	"flag"
-	"fmt"
 	"os"
 
-	"github.com/MYavuzYAGIS/Piker/baser"
-	"github.com/MYavuzYAGIS/Piker/digest5"
+	"github.com/MYavuzYAGIS/Piker/helpers"
 	"github.com/fatih/color"
 )
 
@@ -101,16 +99,19 @@ func main() {
 		os.Exit(exitOK)
 	}
 
+	helpers.PrintBanner()
+
 	// TODO: add argparse
 	// TODO: add file extension checker (.pk)
 	// TODO : create the easiest function which is base64 encode/decode
-	// a := baser.BaseTextDecode("-1")
-	a := baser.BaseTextDecode("aGVsbG8sd29ybGQhCg==")
-	b := baser.BaseTextEncode(a)
-	fmt.Println(a, b)
-	baser.BaseFileEncode()
-	baser.BaseFileDecode()
-	digest5.Md5StringHasher("yavuz")
-	digest5.Md5OnlineLookup("5d41402abc4b2a76b9719d911017c592")
-	digest5.Md5OnlineLookup("aGVsbG8sd29ybCg==")
+	// ====================
+	// a := baser.BaseTextDecode("aGVsbG8sd29ybGQhCg==")
+	// b := baser.BaseTextEncode(a)
+	// fmt.Println(a, b)
+	// baser.BaseFileEncode()
+	// baser.BaseFileDecode()
+	// digest5.Md5StringHasher("yavuz")
+	// digest5.Md5OnlineLookup("5d41402abc4b2a76b9719d911017c592")
+	// digest5.Md5OnlineLookup("aGVsbG8sd29ybCg==")
+	// ========================
 }
