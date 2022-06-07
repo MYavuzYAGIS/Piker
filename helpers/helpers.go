@@ -30,4 +30,6 @@ var Banner = `
 
 func PrintBanner() {
 	BColor.Println(Banner)
+	BColor.Println("Base64 Encode Decode and  Online/Offline hashing/rever lookup tool\n")
+	BColor.Println("Please use --help or -h to see the options\n")
 }
