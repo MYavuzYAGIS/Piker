@@ -5,6 +5,7 @@ import (
 	"os"
 
 	"github.com/MYavuzYAGIS/Piker/helpers"
+	"github.com/MYavuzYAGIS/Piker/shaone"
 	"github.com/fatih/color"
 )
 
@@ -100,6 +101,7 @@ func main() {
 	}
 
 	helpers.PrintBanner()
+	shaone.Sha1OnlineLookup("aaf4c61ddcc5e8a2dabede0f3b482cd9aea9434d")
 
 	// TODO: add argparse
 	// TODO: add file extension checker (.pk)
