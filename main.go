@@ -111,4 +111,6 @@ func main() {
 	baser.BaseFileEncode()
 	baser.BaseFileDecode()
 	digest5.Md5StringHasher("yavuz")
+	digest5.Md5OnlineLookup("5d41402abc4b2a76b9719d911017c592")
+	digest5.Md5OnlineLookup("aGVsbG8sd29ybCg==")
 }

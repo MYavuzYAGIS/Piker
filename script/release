@@ -47,11 +47,11 @@ for ARCH in "amd64" "386"; do
 
         if [[ "${OS}" == "windows" ]]; then
             ARCHIVE="${BINARY}-${OS}-${ARCH}-${VERSION}.zip"
-            zip ${ARCHIVE} ${BINFILE}
+            zip "${ARCHIVE}" ${BINFILE}
             rm ${BINFILE}
         else
             ARCHIVE="${BINARY}-${OS}-${ARCH}-${VERSION}.tgz"
-            tar --create --gzip --file=${ARCHIVE} ${BINFILE}
+            tar --create --gzip --file="${ARCHIVE}" ${BINFILE}
         fi
 
         FILELIST="${FILELIST} ${PROJDIR}/${ARCHIVE}"
@@ -59,4 +59,4 @@ for ARCH in "amd64" "386"; do
 done
 
 gh release create "${TAG}" "${FILELIST}"
-rm ${FILELIST}
+rm "${FILELIST}"
