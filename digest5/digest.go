@@ -1,11 +1,12 @@
 package digest5
 
 // TODO -> Read file path from stdin
+// TODO -> Verify MD5 format before running lookup
 // TODO -> Read string from stdin
 // TODO -> Check file extension
 // TODO -> maybe a better error handling
 // TODO -> enable Flags and coloring schemes
-// TODO -> enable online lookup
+// TODO {DONE} -> enable online lookup
 
 import (
 	"crypto/md5"
@@ -14,8 +15,8 @@ import (
 	"log"
 	"net/http"
 
+	"github.com/MYavuzYAGIS/Piker/helpers"
 	"github.com/PuerkitoBio/goquery"
-	"github.com/fatih/color"
 )
 
 // Md5StringHasher creates a md5 hash of a given string as argument
@@ -53,11 +54,9 @@ func Md5OnlineLookup(text string) {
 		// For each item found, get the title
 		hit := s.Find(".string").Text()
 		if len(hit) == 0 {
-			miss := color.New(color.FgRed, color.Bold)
-			miss.Println("Hash {", text, "} is not  in our database")
+			helpers.Miss.Println("Hash {", text, "} is not  in our database")
 		} else {
-			hit_color := color.New(color.FgGreen, color.Bold)
-			hit_color.Println("Hit!", text, "======>", hit)
+			helpers.Hit_color.Println("Hit!", text, "======>", hit)
 		}
 	})
 }
