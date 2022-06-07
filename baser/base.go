@@ -14,7 +14,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/MYavuzYAGIS/Piker/errorchecker"
+	"github.com/MYavuzYAGIS/Piker/helpers"
 )
 
 func BaseTextDecode(text string) string {
@@ -35,7 +35,7 @@ func BaseTextEncode(text string) string {
 // read from file, encode each line into base 64.
 func BaseFileEncode() int {
 	dat, err := os.Open("mockData/yavuz.pk")
-	errorchecker.Erred(err)
+	helpers.Erred(err)
 	fmt.Println("opened the file")
 	fileScanner := bufio.NewScanner(dat)
 	fileScanner.Split(bufio.ScanLines)
@@ -52,7 +52,7 @@ func BaseFileEncode() int {
 
 func BaseFileDecode() int {
 	dat, err := os.Open("mockData/yavuzdecoded.pk")
-	errorchecker.Erred(err)
+	helpers.Erred(err)
 	fmt.Println("opened the file")
 	fileScanner := bufio.NewScanner(dat)
 	fileScanner.Split(bufio.ScanLines)
