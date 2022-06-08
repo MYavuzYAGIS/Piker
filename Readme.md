@@ -1,4 +1,4 @@
-[![CodeFactor](https://www.codefactor.io/repository/github/myavuzyagis/piker-wip/badge)](https://www.codefactor.io/repository/github/myavuzyagis/piker-wip) [![Go Report Card](https://goreportcard.com/badge/github.com/MYavuzYAGIS/Piker)](https://goreportcard.com/report/github.com/MYavuzYAGIS/Piker)  [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+[![CodeFactor](https://www.codefactor.io/repository/github/myavuzyagis/piker-wip/badge)](https://www.codefactor.io/repository/github/myavuzyagis/piker-wip) [![Go Report Card](https://goreportcard.com/badge/github.com/MYavuzYAGIS/Piker)](https://goreportcard.com/report/github.com/MYavuzYAGIS/Piker)  [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)  [![Go](https://github.com/MYavuzYAGIS/Piker-WIP/actions/workflows/go.yml/badge.svg)](https://github.com/MYavuzYAGIS/Piker-WIP/actions/workflows/go.yml)
 
 ***WIP***
 
