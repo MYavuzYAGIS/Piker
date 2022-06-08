@@ -1,7 +1,8 @@
 [![CodeFactor](https://www.codefactor.io/repository/github/myavuzyagis/piker-wip/badge)](https://www.codefactor.io/repository/github/myavuzyagis/piker-wip)
 
-***WIP***
+[![Go Report Card](https://goreportcard.com/badge/github.com/MYavuzYAGIS/Piker)](https://goreportcard.com/report/github.com/MYavuzYAGIS/Piker)
 
+***WIP***
 
 ![PikerLogo](/helpers/logo/logo.png)
 
