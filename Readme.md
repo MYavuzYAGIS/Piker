@@ -2,7 +2,7 @@
 
 ***WIP***
 
-![PikerLogo](/helpers/logo/Piker.png)
+![PikerLogo](/helpers/logo/PikerResized.png)
 
 This is basically a Swiss Army Knife for reverse-lookups for Sha and Md5 hashes.
 Also encoder/decoder for base64 format.
