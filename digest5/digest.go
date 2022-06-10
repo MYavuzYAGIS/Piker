@@ -27,8 +27,16 @@ func Md5StringHasher(input string) string {
 	return hashed
 }
 
-// take a file and hash it completely, not EACH Line!
+// Takes a file and hashes the entire file
 func Md5FileHasher() {
+}
+
+// Takes a file, checks all the items in the file online
+func Md5lineLookupOnline() {
+}
+
+// Takes a file, checks all the items in the file online
+func Md5lineLookupOffline() {
 }
 
 // Takes an MD5 hash and looks online db to perform a reverse lookup
