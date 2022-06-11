@@ -4,9 +4,7 @@ import (
 	"flag"
 	"os"
 
-	"github.com/MYavuzYAGIS/Piker/digest5"
 	"github.com/MYavuzYAGIS/Piker/helpers"
-	"github.com/MYavuzYAGIS/Piker/shaone"
 )
 
 func main() {
@@ -32,9 +30,11 @@ func main() {
 		os.Exit(helpers.ExitOK)
 	}
 
-	helpers.PrintBanner()
-	shaone.Sha1OnlineLookup("aaf4c61ddcc5e8a2dabede0f3b482cd9aea9434d")
-	digest5.Md5OnlineLookup("5d41402abc4b2a76b9719d911017c592")
+	// helpers.PrintBanner()
+	// shaone.Sha1OnlineLookup("aaf4c61ddcc5e8a2dabede0f3b482cd9aea9434d")
+	// digest5.Md5OnlineLookup("5d41402abc4b2a76b9719d911017c592")
+	// digest5.Md5lineLookupOnline()
+	helpers.FileIterator("yavuz.pk")
 
 	// TODO: add argparse
 	// TODO: add file extension checker (.pk)
@@ -48,5 +48,6 @@ func main() {
 	// digest5.Md5StringHasher("yavuz")
 	// digest5.Md5OnlineLookup("5d41402abc4b2a76b9719d911017c592")
 	// digest5.Md5OnlineLookup("aGVsbG8sd29ybCg==")
+
 	// ========================
 }

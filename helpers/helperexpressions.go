@@ -1,15 +1,17 @@
 package helpers
 
 import (
+	"bufio"
 	"flag"
 	"fmt"
+	"log"
 	"os"
 )
 
 func Erred(e error) {
 	if e != nil {
 		fmt.Println(e)
-		panic(e)
+		log.Fatal(e)
 	}
 }
 
@@ -48,5 +50,33 @@ func Spawn() {
 		h += "  Piker -f -m listfile ec55d3e698d289f2afd663725127bace "
 
 		fmt.Fprintf(os.Stderr, h)
+	}
+}
+
+// func FileIterator(file *os.File) {
+// 	dat, err := os.Open("file")
+// 	Erred(err)
+// 	fmt.Println("opened the file")
+// 	fileScanner := bufio.NewScanner(dat)
+// 	fileScanner.Split(bufio.ScanLines)
+// 	fmt.Println("Scanned the file...")
+// 	fmt.Println("Now Iterating...")
+// 	for fileScanner.Scan() {
+// 		text := fileScanner.Text()
+// 		println(text)
+// 	}
+// }
+func FileIterator(filename string) {
+	mockPath := "mockData/" + filename
+	dat, err := os.Open(mockPath)
+	Erred(err)
+	fmt.Println("opened the file")
+	fileScanner := bufio.NewScanner(dat)
+	fileScanner.Split(bufio.ScanLines)
+	fmt.Println("Scanned the file...")
+	fmt.Println("Now Iterating...")
+	for fileScanner.Scan() {
+		text := fileScanner.Text()
+		println(text)
 	}
 }
