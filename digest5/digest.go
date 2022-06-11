@@ -27,10 +27,6 @@ func Md5StringHasher(input string) string {
 	return hashed
 }
 
-// Takes a file and hashes the entire file
-func Md5FileHasher() {
-}
-
 // Takes a file, checks all the items in the file online
 func Md5lineLookupOnline(filename string) {
 	mockPath := "mockData/" + filename
