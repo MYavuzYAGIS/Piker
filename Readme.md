@@ -3,10 +3,20 @@
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/eaef35af67a840bfa889af52b712ec03)](https://www.codacy.com/gh/MYavuzYAGIS/Piker/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=MYavuzYAGIS/Piker&amp;utm_campaign=Badge_Grade)
 ![PikerLookup](https://img.shields.io/badge/Piker-HashLookup-informational) [![made with Go](https://img.shields.io/badge/made%20with-Go-brightgreen)](http://golang.org) [![Platform](https://img.shields.io/badge/platform-osx%2Flinux%2Fwindows-green)](#)
 
+<h2 align="center">
+  WIP
+</h2>
+
 <p align="center">
-  <h2>WIP</h2>
   <a href="#"><img alt="Piker" src="https://raw.githubusercontent.com/MYavuzYAGIS/Piker-WIP/main/.github/images/LogoGithub_1346x965.png" height="400" /></a>
-  <h3 align="center"><b>Piker</b></h3>
+</p>
+
+<p align="center">
+  <h3 align="center">
+  <b>Piker</b>
+  
+  </h3>
+</p>
 </p>
 
 <p align="center">
