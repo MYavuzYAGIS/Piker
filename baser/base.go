@@ -7,11 +7,9 @@ package baser
 // TODO -> enable Flags and coloring schemes
 
 import (
-	"bufio"
 	"encoding/base64"
 	"fmt"
 	"log"
-	"os"
 	"strings"
 
 	"github.com/MYavuzYAGIS/Piker/helpers"
@@ -33,36 +31,22 @@ func BaseTextEncode(text string) string {
 }
 
 // read from file, encode each line into base 64.
-func BaseFileEncode() int {
-	dat, err := os.Open("mockData/yavuz.pk")
-	helpers.Erred(err)
-	fmt.Println("opened the file")
-	fileScanner := bufio.NewScanner(dat)
-	fileScanner.Split(bufio.ScanLines)
-	fmt.Println("Scanned the file...")
-	fmt.Println("Now Iterating...")
-	for fileScanner.Scan() {
-		text := fileScanner.Text()
-		encoded := BaseTextEncode(text)
-		fmt.Println(encoded)
+func BaseFileDecode(filename string) {
+	mockPath := "mockData/" + filename
+	iterable := helpers.FileIterator(mockPath)
+	helpers.Md5Success.Println("Iterating the file for decoding the content")
+	for _, iter := range iterable {
+		next := BaseTextDecode(iter)
+		fmt.Println(next)
 	}
-	dat.Close()
-	return 0
 }
 
-func BaseFileDecode() int {
-	dat, err := os.Open("mockData/yavuzdecoded.pk")
-	helpers.Erred(err)
-	fmt.Println("opened the file")
-	fileScanner := bufio.NewScanner(dat)
-	fileScanner.Split(bufio.ScanLines)
-	fmt.Println("Scanned the file...")
-	fmt.Println("Now Iterating...")
-	for fileScanner.Scan() {
-		text := fileScanner.Text()
-		encoded := BaseTextDecode(text)
-		fmt.Println(encoded)
+func BaseFileEncode(filename string) {
+	mockPath := "mockData/" + filename
+	iterable := helpers.FileIterator(mockPath)
+	helpers.Md5Success.Println("Iterating the file for encoding the content")
+	for _, iter := range iterable {
+		next := BaseTextEncode(iter)
+		fmt.Println(next)
 	}
-	dat.Close()
-	return 0
 }

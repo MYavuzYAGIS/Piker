@@ -3,9 +3,8 @@ package main
 import (
 	"flag"
 
-	"github.com/MYavuzYAGIS/Piker/digest5"
+	"github.com/MYavuzYAGIS/Piker/baser"
 	"github.com/MYavuzYAGIS/Piker/helpers"
-	"github.com/MYavuzYAGIS/Piker/shaone"
 )
 
 func main() {
@@ -26,8 +25,10 @@ func main() {
 
 	flag.Parse()
 
-	digest5.Md5lineLookupOnline("md5list.pk")
-	shaone.Sha1lineLookupOnline("shaonelist.pk")
+	// digest5.Md5lineLookupOnline("md5list.pk")
+	// shaone.Sha1lineLookupOnline("shaonelist.pk")
+	baser.BaseFileEncode("yavuz.pk")
+	baser.BaseFileDecode("yavuzdecoded.pk")
 
 	// TODO: add argparse
 	// TODO: add file extension checker (.pk)
