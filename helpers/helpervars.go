@@ -14,9 +14,9 @@ var Banner = `
  `
 
 var (
-	base64Success = color.New(color.FgBlue)
-	md5Success    = color.New(color.FgCyan)
-	shaSuccess    = color.New(color.FgGreen, color.Bold)
+	Base64Success = color.New(color.FgBlue)
+	Md5Success    = color.New(color.FgCyan)
+	ShaSuccess    = color.New(color.FgGreen, color.Bold)
 	Failure       = color.New(color.FgRed)
 	Fatal         = color.New(color.FgRed, color.Bold)
 	Hit_color     = color.New(color.FgGreen, color.Bold)
@@ -42,5 +42,3 @@ const (
 	ExitFetchURL
 	ExitParseStatements
 )
-
-var PikerVersion = "dev"

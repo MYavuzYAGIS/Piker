@@ -9,13 +9,11 @@ package digest5
 // TODO {DONE} -> enable online lookup
 
 import (
-	"bufio"
 	"crypto/md5"
 	"encoding/hex"
 	"fmt"
 	"log"
 	"net/http"
-	"os"
 
 	"github.com/MYavuzYAGIS/Piker/helpers"
 	"github.com/PuerkitoBio/goquery"
@@ -34,20 +32,13 @@ func Md5FileHasher() {
 }
 
 // Takes a file, checks all the items in the file online
-func Md5lineLookupOnline() {
-	dat, err := os.Open("mockData/md5list.pk")
-	helpers.Erred(err)
-	fmt.Println("opened the file")
-	fileScanner := bufio.NewScanner(dat)
-	fileScanner.Split(bufio.ScanLines)
-	fmt.Println("Scanned the file...")
-	fmt.Println("Now Iterating...")
-	for fileScanner.Scan() {
-		text := fileScanner.Text()
-		Md5OnlineLookup(text)
-
+func Md5lineLookupOnline(filename string) {
+	mockPath := "mockData/" + filename
+	iterable := helpers.FileIterator(mockPath)
+	helpers.Md5Success.Println("Iterating Online Database for Md5 Reverse Lookup")
+	for _, iter := range iterable {
+		Md5OnlineLookup(iter)
 	}
-	dat.Close()
 }
 
 // Takes a file, checks all the items in the file online

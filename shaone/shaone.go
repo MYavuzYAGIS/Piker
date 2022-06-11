@@ -38,3 +38,13 @@ func Sha1OnlineLookup(text string) {
 		}
 	})
 }
+
+// Takes a file, checks all the items in the file online
+func Sha1lineLookupOnline(filename string) {
+	mockPath := "mockData/" + filename
+	iterable := helpers.FileIterator(mockPath)
+	helpers.Md5Success.Println("Iterating Online Database for Sha1 Reverse Lookup")
+	for _, iter := range iterable {
+		Sha1OnlineLookup(iter)
+	}
+}
