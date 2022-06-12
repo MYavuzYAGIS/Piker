@@ -3,7 +3,6 @@ package main
 import (
 	"flag"
 
-	"github.com/MYavuzYAGIS/Piker/baser"
 	"github.com/MYavuzYAGIS/Piker/helpers"
 )
 
@@ -27,10 +26,11 @@ func main() {
 
 	// digest5.Md5lineLookupOnline("md5list.pk")
 	// shaone.Sha1lineLookupOnline("shaonelist.pk")
-	baser.BaseFileEncode("yavuz.pk")
-	baser.BaseFileDecode("yavuzdecoded.pk")
+	// baser.BaseFileEncode("yavuz.pk")
+	// baser.BaseFileDecode("yavuzdecoded.pk")
+
+	helpers.PrintBanner()
+	helpers.Spawn()
 
 	// TODO: add argparse
-	// TODO: add file extension checker (.pk)
-	// TODO : create the easiest function which is base64 encode/decode
 }

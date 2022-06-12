@@ -3,7 +3,16 @@ package helpers
 import (
 	"flag"
 	"fmt"
-	"os"
+)
+
+var (
+	OnlineFlag     bool
+	OfflineFlag    bool
+	BaseDecodeFlag bool
+	BaseEncodeFlag bool
+	Md5Flag        bool
+	Sha1Flag       bool
+	ListFlag       bool
 )
 
 func Spawn() {
@@ -20,13 +29,6 @@ func Spawn() {
 		h += "-m,   --md5		reverse lookup for  for md5 hash\n"
 		h += "-s,   --sha1  	reverse lookup for for sha1 hash values\n"
 		h += "-l, 	--list  	custom dict that contains API endpoints to hit.\n"
-
-		h += "Exit Codes:\n"
-		h += fmt.Sprintf("  %d\t%s\n", ExitOK, "OK")
-		h += fmt.Sprintf("  %d\t%s\n", ExitOpenFile, "Failed to open file")
-		h += fmt.Sprintf("  %d\t%s\n", ExitReadInput, "Failed to read input")
-		h += fmt.Sprintf("  %d\t%s\n", ExitFetchURL, "Failed to fetch URL")
-		h += fmt.Sprintf("  %d\t%s\n", ExitParseStatements, "Failed to parse statements")
 		h += "\n"
 
 		h += "Examples:\n"
@@ -34,6 +36,6 @@ func Spawn() {
 		h += "  Piker -o -l listfile filetocrack.pk\n"
 		h += "  Piker -f -m listfile ec55d3e698d289f2afd663725127bace "
 
-		fmt.Fprintf(os.Stderr, h)
+		fmt.Println(h)
 	}
 }

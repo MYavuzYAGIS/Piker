@@ -23,22 +23,3 @@ var (
 	Miss          = color.New(color.FgRed, color.Bold)
 	BColor        = color.New(color.FgWhite, color.BlinkSlow)
 )
-
-var (
-	OnlineFlag     bool
-	OfflineFlag    bool
-	BaseDecodeFlag bool
-	BaseEncodeFlag bool
-	Md5Flag        bool
-	Sha1Flag       bool
-	ListFlag       bool
-	VersionFlag    bool
-)
-
-const (
-	ExitOK = iota
-	ExitOpenFile
-	ExitReadInput
-	ExitFetchURL
-	ExitParseStatements
-)
